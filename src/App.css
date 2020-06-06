@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+.container{
+width: 85%;
+margin:auto;
+}
+.dim{
+  font-size: 14px;
+  color: grey;
+  padding: 5px;
+}
+.author{
+  font-size: 16px;  
+}
+.hideButton{
+  border:none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.upVoteButton{
+  border:none;
+  background-color: inherit;
+  cursor: pointer;
+  font-size: 18px;
+}
+.title{
+  font-size: 18px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+table{
+  border-collapse: collapse;
 }
+th{
+  background-color: orange;
+}
+th, td {
+  padding: 0 10px 0 10px;
+  text-align: left;
+ 
+}
+hr{
+  border:2px solid orange;
+}
+.nav{
+  text-align: right;
+  color:orange;
+  padding:10px;
+}
+.link{
+  padding-right: 5px;
+  padding-left: 5px;
+  color:orange;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/*
+	Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically.
+	*/
+	@media
+	  only screen 
+    and (max-width: 760px), (min-device-width: 768px) 
+    and (max-device-width: 1024px)  {
 
-.App-link {
-  color: #61dafb;
-}
+		/* Force table to not be like tables anymore */
+		table, thead, tbody, th, td, tr,span {
+			display: block;
+		}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+    tr {
+      margin: 0 0 1rem 0;
+    }
+      
+    tr:nth-child(odd) {
+      background: #ccc;
+    }
+    
+		td {
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 40%;
+		}
+
+		td:before {
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 0;
+			left: 6px;
+			width: 35%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+
+		/*
+		Label the data
+    You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+		*/
+		td:nth-of-type(1):before { content: "Comments"; }
+		td:nth-of-type(2):before { content: "Vote Count"; }
+		td:nth-of-type(3):before { content: "UpVote"; }
+		td:nth-of-type(4):before { content: "News Details"; }
+		
+	}
