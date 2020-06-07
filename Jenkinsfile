@@ -1,5 +1,8 @@
-node {
-    def dockerImage
+pipeline {
+    
+    agent {
+        dockerfile true
+    }
     stages{
         stage('checkout'){
             steps{
@@ -8,7 +11,7 @@ node {
         }
         stage('build'){
             steps{
-                customImage = docker.build("vannurvali/ps-hacker-news:${env.BUILD_ID}")
+               docker.build("vannurvali/ps-hacker-news:${env.BUILD_ID}")
             }
         }
         stage('test'){
@@ -20,7 +23,7 @@ node {
         }
         stage('push'){
             steps{
-                customImage.push()
+                docker.push()
             }
         }
     }
