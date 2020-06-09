@@ -18,7 +18,7 @@ Search query search_by_date?tags=story is used to fetch latest feed and only sto
 
 ## Tech Stack used to implement
 
-    **Tech:  `ReactJs`, `react-router`, `recharts`, `expressJs`, `jest`, `enzyme`, `css`, `html`**
+    ReactJs, react-router, recharts, expressJs, jest, enzyme, css, html
 
 ## About APP
  
