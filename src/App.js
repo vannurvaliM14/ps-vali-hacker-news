@@ -7,8 +7,7 @@ import AppRouter from './app.router'
 function App() {
   return (
     <div className='container'>
-        <AppRouter></AppRouter>
-        
+        <AppRouter></AppRouter>        
     </div>
   );
 }

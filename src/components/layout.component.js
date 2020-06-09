@@ -15,7 +15,7 @@ export default function Layout(props) {
 
 
     React.useEffect(() => {
-        Service.test(props.location.pathname, props.location.search, res => {
+        Service.fetch(props.location.pathname, props.location.search, res => {
             res.data.hits ? setHits(res.data.hits) : setHits(hits)
             res.data.page ? setPage(res.data.page) : setPage(page)
             res.data.nbPages ? setnbPages(res.data.nbPages) : setnbPages(nbPages)
@@ -96,14 +96,14 @@ export default function Layout(props) {
             <table>
                 <thead >
                     <tr className='head'>
-                        {headers.map(item => <th >{item}</th>)}
+                        {headers.map(item => <th key={item}>{item}</th>)}
                     </tr>
                 </thead>
                 <tbody>
                     {hits.map(item => {
                         let component;
                         if (!(Service.isHidden(item.objectID) || item.hidden)){
-                            component = <NewsItem {...item} hide={hide} upvote={fetchUpvotes(item.objectID)} castVote={castVote} />
+                            component = <NewsItem key={item.objectID} {...item} hide={hide} upvote={fetchUpvotes(item.objectID)} castVote={castVote} />
                         }
                         return component;
                     })}

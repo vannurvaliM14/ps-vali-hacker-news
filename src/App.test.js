@@ -1,16 +1,14 @@
 import React from 'react';
+import { shallow} from 'enzyme';
 
-import {configure, shallow} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16'
 
 import App from './App'
 
-configure({adapter:new Adapter()})
 
-describe("Graph Component",()=>{
-    it("Should Recive Data in Props",()=>{
+
+describe("App Component",()=>{
+    it("Snapshot test",()=>{
         const wrapper = shallow(<App/>);
-
-        expect([2,3]).toHaveLength(2)
+        expect(wrapper).toMatchSnapshot()
     })
 })

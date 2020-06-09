@@ -1,3 +1,148 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Graph Component Renders Correctly. Snapshot test Should Recive Data in Props 1`] = `ShallowWrapper {}`;
+exports[`Graph Component Renders Correctly. Snapshot test Should Recive Data in Props 1`] = `
+<div
+  style={
+    Object {
+      "height": 150,
+      "width": "100%",
+    }
+  }
+>
+  <ResponsiveContainer
+    debounce={0}
+    height="100%"
+    width="100%"
+  >
+    <LineChart
+      barCategoryGap="10%"
+      barGap={4}
+      layout="horizontal"
+      margin={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "right": 30,
+          "top": 10,
+        }
+      }
+      reverseStackOrder={false}
+      stackOffset="none"
+    >
+      <XAxis
+        allowDataOverflow={false}
+        allowDecimals={true}
+        allowDuplicatedCategory={true}
+        dataKey="objectID"
+        domain={
+          Array [
+            0,
+            "auto",
+          ]
+        }
+        height={30}
+        hide={false}
+        mirror={false}
+        orientation="bottom"
+        padding={
+          Object {
+            "left": 0,
+            "right": 0,
+          }
+        }
+        reversed={false}
+        scale="auto"
+        tickCount={5}
+        type="category"
+        width={0}
+        xAxisId={0}
+      />
+      <YAxis
+        allowDataOverflow={false}
+        allowDecimals={true}
+        allowDuplicatedCategory={true}
+        domain={
+          Array [
+            0,
+            "auto",
+          ]
+        }
+        height={0}
+        hide={false}
+        mirror={false}
+        orientation="left"
+        padding={
+          Object {
+            "bottom": 0,
+            "top": 0,
+          }
+        }
+        reversed={false}
+        scale="auto"
+        tickCount={5}
+        type="number"
+        width={60}
+        yAxisId={0}
+      />
+      <Tooltip
+        active={false}
+        allowEscapeViewBox={
+          Object {
+            "x": false,
+            "y": false,
+          }
+        }
+        animationDuration={400}
+        animationEasing="ease"
+        contentStyle={Object {}}
+        coordinate={
+          Object {
+            "x": 0,
+            "y": 0,
+          }
+        }
+        cursor={true}
+        cursorStyle={Object {}}
+        filterNull={true}
+        isAnimationActive={true}
+        itemStyle={Object {}}
+        labelStyle={Object {}}
+        offset={10}
+        separator=" : "
+        useTranslate3d={false}
+        viewBox={
+          Object {
+            "x1": 0,
+            "x2": 0,
+            "y1": 0,
+            "y2": 0,
+          }
+        }
+        wrapperStyle={Object {}}
+      />
+      <Line
+        activeDot={true}
+        animateNewValues={true}
+        animationBegin={0}
+        animationDuration={1500}
+        animationEasing="ease"
+        connectNulls={false}
+        dataKey="votes"
+        dot={true}
+        fill="#8884d8"
+        hide={false}
+        isAnimationActive={true}
+        legendType="line"
+        onAnimationEnd={[Function]}
+        onAnimationStart={[Function]}
+        points={Array []}
+        stroke="#8884d8"
+        strokeWidth={1}
+        type="linear"
+        xAxisId={0}
+        yAxisId={0}
+      />
+    </LineChart>
+  </ResponsiveContainer>
+</div>
+`;

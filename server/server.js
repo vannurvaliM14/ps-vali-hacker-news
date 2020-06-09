@@ -16,7 +16,7 @@ const app = express()
 
 
 app.use('^/$', (req, res,next) => {
-    console.log(req)
+    
     const context = {}
     fs.readFile(path.resolve('./build/index.html'), 'utf-8', (err, data) => {
         if (err) {

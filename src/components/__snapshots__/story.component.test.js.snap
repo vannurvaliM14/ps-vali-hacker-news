@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Story Component Snapshot Test 1`] = `
+<tr>
+  <td />
+  <td />
+  <td>
+    <button
+      className="upvote-button"
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        className="fas fa-caret-up"
+      />
+    </button>
+  </td>
+  <td>
+    <span
+      className="news"
+    >
+      <span
+        className="title"
+      />
+       
+      <a
+        className="dim"
+      >
+        (
+        )
+      </a>
+      <span
+        className="dim"
+      >
+        by
+      </span>
+       
+      <span
+        className="author"
+      />
+      <span
+        className="dim"
+      >
+        NaN Year(s) ago
+      </span>
+      <button
+        className="hide-button"
+        onClick={[Function]}
+      >
+        [ hide ]
+      </button>
+    </span>
+  </td>
+</tr>
+`;

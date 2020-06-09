@@ -1,68 +1,33 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Approach
 
-In the project directory, you can run:
+This App has been implemented by consuming the api https://hn.algolia.com/api to fetch the news.
+Search query search_by_date?tags=story is used to fetch latest feed and only stories. Later page number is passed to get the remaining data when user clicks on Previous or Next links provided at the bottom the page. Also included a Real time graph at the bottom of the page, It is Responsive and automatically gets updated when user Hides an item or updates upvote.
 
-### `npm start`
+## Functionalities
+    1. All Paginated URLs are bookmarkable
+    2. User can hide News Item by clicking the hide link at the end of News Details column. 
+       This hidden Item ID is stored in localstorage, hence browsed refresh cannot reset and cannot be viewed by User again.
+    3. user can add as many upvotes as he wants. As the hide functionality, upvotes are also stored in
+       localstorage and cannot be reset on browser refresh. Data in upvotes column and graph is updated
+       in real time as user clicks on upvote icon
+    4. App is responsive, and it has breakpoint to switch when it is used in small screen devices.
+    5. User can click on Previous and next links, depending on the page user currently viewing,
+       page will navigate to next or its previous page. and this URL can be bookmarkable.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tech Stack used to implement
+    `ReactJs`, `react-router`, `recharts`, `expressJs`, `jest`, `enzyme`, `css`, `html`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## About APP
+ 
+    1. App is deployed to heroku and live at https://ps-vali-hacker-news.herokuapp.com/
+    2. Source code contains heroku.yml file, allows heroku to build the images using Dockerfile and 
+       make instance fully up and running.
+    3. Dockerfile includes Node:12.18.0 images and it has build steps such as install dependancies, Test the
+       the app with test cases writen, and build
+    4. Source code contains Jenkinsfile as well, which has the script to publish the build docker image to
+       docker hub.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

@@ -10,12 +10,12 @@ margin:auto;
 .author{
   font-size: 16px;  
 }
-.hideButton{
+.hide-button{
   border:none;
   background-color: inherit;
   cursor: pointer;
 }
-.upVoteButton{
+.upvote-button{
   border:none;
   background-color: inherit;
   cursor: pointer;

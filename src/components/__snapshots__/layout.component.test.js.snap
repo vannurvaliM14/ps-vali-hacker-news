@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout component test snapshot test 1`] = `
+<div
+  style={
+    Object {
+      "textAlign": "center",
+    }
+  }
+>
+  <table>
+    <thead>
+      <tr
+        className="head"
+      >
+        <th
+          key="Comments"
+        >
+          Comments
+        </th>
+        <th
+          key="Vote Count"
+        >
+          Vote Count
+        </th>
+        <th
+          key="UpVote"
+        >
+          UpVote
+        </th>
+        <th
+          key="News Details"
+        >
+          News Details
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <div
+    className="nav"
+  >
+     | 
+  </div>
+  <hr />
+  <Graph
+    data={Array []}
+  />
+</div>
+`;

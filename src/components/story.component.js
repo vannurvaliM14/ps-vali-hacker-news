@@ -8,7 +8,7 @@ export default function NewsItem({ created_at_i, title, num_comments, points, ur
         let now = Date.now() / 1000;
         let parse = (val) => parseInt(val)
 
-        let diff = now - created_at_i;
+        let diff = now - created_at_i;        
         if (diff < 60) {
             message += parse(diff) + ' Second(s) ago';
         } else if (diff / 60 < 60) {
@@ -30,13 +30,13 @@ export default function NewsItem({ created_at_i, title, num_comments, points, ur
         <tr>
             <td>{num_comments}</td>
             <td>{upvote ? upvote : points}</td>
-            <td><button className='upVoteButton' type='button' onClick={e => castVote(objectID, points)}><i class='fas fa-caret-up'></i></button></td>
+            <td><button className='upvote-button' type='button' onClick={e => castVote(objectID, points)}><i className='fas fa-caret-up'></i></button></td>
             <td>
                 <span className='news'><span className='title'>{title}</span> <a className='dim' href={url}>({url?url.split('/')[2]:url})</a>
                     
                     <span className='dim'>by</span> <span className='author'>{author}</span> 
                     <span className='dim'>{time()}</span>
-                    <button className='hideButton' onClick={() => hide(objectID, title)}>[ hide ]</button>
+                    <button className='hide-button' onClick={() => hide(objectID, title)}>[ hide ]</button>
                    </span>
             </td>
         </tr>

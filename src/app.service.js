@@ -5,7 +5,7 @@ const instance = axios.create({
 })
 
 export default class Service{
-    static test(path,search,cb){
+    static fetch(path,search,cb){
         instance.get(path+search)
         .then(res=>cb(res))
         .catch(error=>console.log(error))
