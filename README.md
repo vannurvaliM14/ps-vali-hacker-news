@@ -6,6 +6,7 @@ This App has been implemented by consuming the api: https://hn.algolia.com/api  
 Search query search_by_date?tags=story is used to fetch latest feed and only stories. Later page number is passed to get the remaining data when user clicks on Previous or Next links provided at the bottom the page. Also included a Real time graph at the bottom of the page, It is Responsive and automatically gets updated when user Hides an item or updates upvote.
 
 ## Functionalities
+
     1. All Paginated URLs are bookmarkable
     2. User can hide News Item by clicking the hide link at the end of News Details column. 
        This hidden Item ID is stored in localstorage, hence browsed refresh cannot reset and cannot be viewed by User again.
