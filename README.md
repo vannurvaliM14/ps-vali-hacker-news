@@ -22,7 +22,7 @@ Search query search_by_date?tags=story is used to fetch latest feed and only sto
 
 ## About APP
  
-    1. App is deployed to heroku and live at: https://ps-vali-hacker-news.herokuapp.com/
+    1. App is deployed to heroku and live at: https://ps-vali-hacker-news.herokuapp.com/   
     2. Source code contains heroku.yml file, allows heroku to build the images using Dockerfile and 
        make instance fully up and running.
     3. Dockerfile includes Node:12.18.0 images and it has build steps such as install dependancies, Test the
